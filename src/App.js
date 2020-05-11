@@ -20,10 +20,11 @@ const App = () => {
         placeholder="Enter your password"
         value={passWord}
         onChange={(keyPress) => {
-          setUserName(keyPress.target.value);
+          setPassword(keyPress.target.value);
         }}
       />
-      <p>{userName}</p>
+      <h2>{userName}</h2>
+      <h2>{passWord}</h2>
     </div>
   );
 };
