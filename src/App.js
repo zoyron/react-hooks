@@ -4,6 +4,7 @@ import "./App.css";
 const App = () => {
   const [userName, setUserName] = useState("");
   const [passWord, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="container">
       <input
@@ -24,8 +25,15 @@ const App = () => {
         }}
       />
       <h2>{userName}</h2>
-      <h2>{passWord}</h2>
-      <button>Show or hide the password</button>
+      {/* if the alue of show password is true then we display the password, else we do not display the password */}
+      <h2>{showPassword ? passWord : "*".repeat(passWord.length)}</h2>
+      <button
+        onClick={(clickEvent) => {
+          setShowPassword(!showPassword);
+        }}
+      >
+        {showPassword ? "Hide Password" : "Show Password"}
+      </button>
     </div>
   );
 };
