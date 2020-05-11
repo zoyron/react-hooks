@@ -5,7 +5,7 @@ const App = () => {
   const [userName, setUserName] = useState("");
   const [passWord, setPassword] = useState("");
   return (
-    <div>
+    <div className="container">
       <input
         type="text"
         placeholder="Enter user name"
@@ -25,6 +25,7 @@ const App = () => {
       />
       <h2>{userName}</h2>
       <h2>{passWord}</h2>
+      <button>Show or hide the password</button>
     </div>
   );
 };
